@@ -35,6 +35,11 @@
   li {
     cursor: pointer;
   }
+
+  div {
+    margin-top: 200px;
+
+  }
   
   main {
     margin: 3.125rem auto;
@@ -54,8 +59,56 @@
 
 /* Estilo para a imagem da logo */
 .logo {
-    width: 130px; /* Largura da imagem */
-    height: 130px; /* Altura da imagem */
+    width: 120px; /* Largura da imagem */
+    height: 120px; /* Altura da imagem */
     object-fit: cover; /* Garante que a imagem preencha completamente o círculo */
     border-radius: 100%; /* Garante que a imagem seja exibida como um círculo */
+}
+
+.link {
+  color: #0066cc;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+#produto {
+  display: flex;
+  justify-content: space-between;
+  & > #opcoes-produtos {
+    flex-grow: 0;
+    flex-basis: 33.33333%;
+  }
+  & > #visualizacao {
+    flex-grow: 0;
+    flex-basis: 66.66666%;
+  }
+}
+
+#opcoes-produto {
+  display: flex;
+  flex-direction: column;
+  & > h1 {
+    width: 20rem;
+    font-size: 2rem;
+  }
+}
+
+.foto-produto {
+  display : flex;
+  height: 230px;
+  width: 280px;
+  border: 2px solid rgb(44, 44, 44);
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+  &:hover {
+    text-decoration: underline;
+  }
+
+}
+
+#visualizacao {
+  margin: 0 0 0 4rem;
 }
