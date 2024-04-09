@@ -29,6 +29,7 @@
       justify-content: space-between;
       align-items: center;
       font-size: medium;
+      position:fixed;
     }
   }
 
@@ -36,9 +37,43 @@
     cursor: pointer;
   }
 
-  div {
-    margin-top: 200px;
+  svg {
+    margin-left: 20px;
+  }
 
+  div {
+    position: relative;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #lupa-container {
+    align-items: center;
+    transition: all 0.3s ease;
+    & > lupa-icon {
+      margin-left: -100px;
+    }
+  }
+
+  #lupa-input {
+    padding: 10px;
+    margin-right: 10px;
+  }
+
+  #lupa-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+  }
+
+  #lupa-icon {
+    margin-right: 20px;
+    cursor: pointer;
   }
   
   main {
@@ -47,7 +82,8 @@
   }
 
 /* Estilo para o contêiner da logo */
-.logo-container {
+  .logo-container {
+    /*margin-left: 60px;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,27 +91,30 @@
     background-color: #f2f2f2; /* Cor de fundo para visualização */
     border-radius: 100%; /* Bordas arredondadas para criar um círculo */
     overflow: hidden; /* Garante que a imagem não ultrapasse os limites do círculo */
-}
+  }
 
 /* Estilo para a imagem da logo */
-.logo {
+  .logo {
     width: 120px; /* Largura da imagem */
     height: 120px; /* Altura da imagem */
     object-fit: cover; /* Garante que a imagem preencha completamente o círculo */
     border-radius: 100%; /* Garante que a imagem seja exibida como um círculo */
-}
-
-.link {
-  color: #0066cc;
-  cursor: pointer;
-  &:hover {
-    text-decoration: underline;
   }
-}
+
+  .link {
+    color: #0066cc;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 
 #produto {
   display: flex;
   justify-content: space-between;
+  & div {
+    margin-top: 200px;
+  }
   & > #opcoes-produtos {
     flex-grow: 0;
     flex-basis: 33.33333%;
